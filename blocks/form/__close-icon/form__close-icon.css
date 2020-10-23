@@ -1,0 +1,8 @@
+.form__close-icon {
+  width: 100%;
+  transition: opacity .5s ease-in-out;
+}
+
+.form__close-icon:hover {
+  opacity: .6; 
+}

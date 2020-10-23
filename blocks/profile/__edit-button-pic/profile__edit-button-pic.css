@@ -1,0 +1,15 @@
+.profile__edit-button-pic {
+  transition: opacity .5s ease-in-out;
+}
+
+.profile__edit-button-pic:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__edit-button-pic {
+    width: 18px;
+    height: 18px;
+  }
+}
+

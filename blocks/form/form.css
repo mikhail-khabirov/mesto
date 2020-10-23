@@ -1,0 +1,25 @@
+.form {
+  width: 430px;
+  height: 330px;
+  background-color: #fff;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: flex-start;
+  color: #000;
+  position: absolute;
+  top: 143px;
+  left: 50%;
+  margin-left: -215px;
+  z-index: 1;
+  display: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+    width: 282px;
+    height: 322px;
+    margin-left: -141px;
+    top: 92px;
+  }
+}
