@@ -7,11 +7,10 @@
   align-items: flex-start;
   color: #000;
   position: absolute;
+  z-index: 2;
   top: 143px;
   left: 50%;
   margin-left: -215px;
-  z-index: 1;
-  display: none;
   text-align: center;
 }
 

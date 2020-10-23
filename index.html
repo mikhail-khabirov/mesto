@@ -22,14 +22,19 @@
         </div>
         <button class="profile__add-button"><img src="./images/add-button_icon.svg" alt="иконка кнопки" class="profile__add-button-icon"></button>
       </section>
-      <form action="#" class="form">
-        <button class="form__close-button"><img src="./images/close-icon.png" alt="закрыть" class="form__close-icon"></button>
-        <h2 class="form__title">Редактировать профиль</h2>
-        <input type="text" name="name" class="form__input-name" placeholder="Жак-Ив Кусто">
-        <input type="text" name="job" class="form__input-job" placeholder="Исследователь океана">
-        <input type="submit" class="form__submit-button" value="Сохранить">
-      </form>
-      <div class="overlay"></div>
+      
+      <div class="popup">
+        <form action="#" class="form">
+          <button class="form__close-button"><img src="./images/close-icon.png" alt="закрыть" class="form__close-icon"></button>
+          <h2 class="form__title">Редактировать профиль</h2>
+          <input type="text" name="name" class="form__input-name" placeholder="Жак-Ив Кусто">
+          <input type="text" name="job" class="form__input-job" placeholder="Исследователь океана">
+          <input type="submit" class="form__submit-button" value="Сохранить">
+        </form>
+        <div class="popup__container">    
+        </div>
+      </div>
+
       <section class="elements">
         <div class="element">
           <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__pic">
