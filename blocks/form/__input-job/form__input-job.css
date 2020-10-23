@@ -13,5 +13,7 @@
 @media screen and (max-width: 767px) {
   .form__input-job {
     width: calc(100% - 2*22px);
+    margin-top: 22px;
+    padding: 9px 1px 8px 0;
   }
 }

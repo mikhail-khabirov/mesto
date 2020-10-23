@@ -5,10 +5,9 @@
   cursor: pointer;
   object-fit: cover;
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: -36px;
-  right: -36px;
+  width: 55px;
+  top: -45px;
+  right: -45px;
 }
 
 .form__close-button:focus {
@@ -17,9 +16,8 @@
 
 @media screen and (max-width: 767px) {
   .form__close-button {
-    width: 26px;
-    height: 26px;
-    top: -36px;
+    width: 36px;
+    top: -49px;
     right: 0;
   }
 }

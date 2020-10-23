@@ -8,7 +8,7 @@
   color: #000;
   position: absolute;
   z-index: 2;
-  top: 143px;
+  top: 150px;
   left: 50%;
   margin-left: -215px;
   text-align: center;
@@ -19,6 +19,6 @@
     width: 282px;
     height: 322px;
     margin-left: -141px;
-    top: 92px;
+    top: 96px;
   }
 }

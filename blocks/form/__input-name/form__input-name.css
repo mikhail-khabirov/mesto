@@ -4,8 +4,8 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
-  padding: 0 0 13px 0;
-  margin: 54px auto 0;
+  padding: 0 0 8px 0;
+  margin: 48px auto 0;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
@@ -14,5 +14,6 @@
   .form__input-name {
     width: calc(100% - 2*22px);
     margin-top: 75px;
+    padding-right: 4px;
   }
 }
