@@ -8,11 +8,14 @@
 </head>
 <body class="root">
   <div class="page">
+
     <header class="header">
       <img src="./images/logo.svg" 
       alt="лого" class="logo">
     </header>
+
     <main class="content">
+
       <section class="profile">
         <img src="./images/avatar.jpg" alt="аватар" class="profile__avatar">
         <div class="profile__info">
@@ -24,12 +27,12 @@
       </section>
       
       <div class="popup">
-        <form action="#" class="form">
-          <button class="form__close-button"><img src="./images/close-icon.png" alt="закрыть" class="form__close-icon"></button>
+        <form action="#" name="form" class="form">
+          <button class="form__close-button"><img src="./images/close-icon.svg  " alt="закрыть" class="form__close-icon"></button>
           <h2 class="form__title">Редактировать профиль</h2>
-          <input type="text" name="name" class="form__input-name" value="Жак-Ив Кусто">
-          <input type="text" name="job" class="form__input-job" value="Исследователь океана">
-          <input type="submit" class="form__submit-button" value="Сохранить">
+          <input type="text" name="name" class="form__input form__input_name">
+          <input type="text" name="job" class="form__input form__input_job">
+          <button type="submit" class="form__submit-button">Сохранить</button>
         </form>
         <div class="popup__container">    
         </div>
@@ -39,50 +42,52 @@
         <div class="element">
           <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__pic">
           <div class="element__description">
-            <p class="element__text">Карачаевск</p>
+            <h2 class="element__text">Карачаевск</h2>
             <button class="element__like-button"><img src="./images/like-button.svg" alt="кнопка" class="element__like-button-pic"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/elbrus.jpg" alt="Эльбрус" class="element__pic">
           <div class="element__description">
-            <p class="element__text">Гора Эльбрус</p>
+            <h2 class="element__text">Гора Эльбрус</h2>
             <button class="element__like-button"><img src="./images/like-button.svg" alt="кнопка" class="element__like-button-pic"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/dombai.jpg" alt="Эльбрус" class="element__pic">
           <div class="element__description">
-            <p class="element__text">Домбай</p>
+            <h2 class="element__text">Домбай</h2>
             <button class="element__like-button"><img src="./images/like-button.svg" alt="кнопка" class="element__like-button-pic"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/elbrus.jpg" alt="Эльбрус" class="element__pic">
           <div class="element__description">
-            <p class="element__text">Гора Эльбрус</p>
+            <h2 class="element__text">Гора Эльбрус</h2>
             <button class="element__like-button"><img src="./images/like-button.svg" alt="кнопка" class="element__like-button-pic"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/dombai.jpg" alt="Эльбрус" class="element__pic">
           <div class="element__description">
-            <p class="element__text">Домбай</p>
+            <h2 class="element__text">Домбай</h2>
             <button class="element__like-button"><img src="./images/like-button.svg" alt="кнопка" class="element__like-button-pic"></button>
           </div>
         </div>
         <div class="element">
           <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкесия" class="element__pic">
           <div class="element__description">
-            <p class="element__text">Карачаево-Черкесия</p>
+            <h2 class="element__text">Карачаево-Черкесия</h2>
             <button class="element__like-button"><img src="./images/like-button.svg" alt="кнопка" class="element__like-button-pic"></button>
           </div>
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
+    
   </div>
   <script src="./script.js"></script>
 </body>

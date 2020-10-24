@@ -1,19 +1,23 @@
-.form__input-name {
+.form__input {
   width: calc(100% - 2*36px);
   display: block;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.2;
-  padding: 0 0 8px 0;
-  margin: 48px auto 0;
+  line-height: 17px;
+  padding: 0 0 10px 0;
+  margin: 0 auto 29px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
+.form__input:last-of-type {
+  margin-bottom: 0;
+}
+
+
 @media screen and (max-width: 767px) {
-  .form__input-name {
+  .form__input {
     width: calc(100% - 2*22px);
-    margin-top: 75px;
     padding-right: 4px;
   }
 }

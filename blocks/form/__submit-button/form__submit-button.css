@@ -1,7 +1,7 @@
 .form__submit-button {
   display: block;
   width: calc(100% - 2*36px);
-  margin: 48px auto 0;
+  margin: 51px auto 36.51px;
   background-color: #000;
   color: #fff;
   font-weight: 400;
@@ -27,6 +27,7 @@
     padding: 14px 82px;
     font-size: 14px;
     margin-top: 47px;
+    margin-bottom: 25px;
   }
 }
 

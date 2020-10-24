@@ -4,9 +4,13 @@
   width: 20px;
   height: 18px;
   padding: 0;
-  margin-left: auto;
   margin-right: 2.5px;
   cursor: pointer;
+  transition: opacity .5s ease-in-out;
+}
+
+.element__like-button:hover {
+  opacity: .3;
 }
 
 .element__like-button:focus {
