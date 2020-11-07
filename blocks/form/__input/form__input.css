@@ -14,6 +14,9 @@
   margin-bottom: 0;
 }
 
+.form__input::placeholder {
+  color: #C4C4C4;
+}
 
 @media screen and (max-width: 767px) {
   .form__input {

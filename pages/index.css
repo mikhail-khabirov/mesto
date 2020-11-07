@@ -22,10 +22,17 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup-pic/__container/popup-pic__container.css);
+@import url(../blocks/popup-pic/__photo/popup-pic__photo.css);
+@import url(../blocks/popup-pic/__close-button/popup-pic__close-button.css);
+@import url(../blocks/popup-pic/__text/popup-pic__text.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
+@import url(../blocks/element/__delete-button/element__delete-button.css);
 @import url(../blocks/element/__description/element__description.css);
 @import url(../blocks/element/__text/element__text.css);
 @import url(../blocks/element/__like-button/element__like-button.css);
+@import url(../blocks/element/__pic/element__pic.css);
+@import url(../blocks/element/__like-button/_pressed/element__like-button_pressed.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
