@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto Russia</title>
 </head>
+
 <body class="root">
   <div class="page">
 
     <header class="header">
-      <img src="./images/logo.svg" 
-      alt="лого" class="logo">
+      <img src="./images/logo.svg" alt="лого" class="logo">
     </header>
 
     <main class="content">
@@ -20,24 +21,48 @@
         <img src="./images/avatar.jpg" alt="аватар" class="profile__avatar">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__edit-button"><img src="./images/edit-button.svg" alt="кнопка" class="profile__edit-button-pic"></button>
+          <button type="button" class="profile__edit-button"><img src="./images/edit-button.svg" alt="кнопка"
+              class="profile__edit-button-pic"></button>
           <p class="profile__job">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button" ><img src="./images/add-button_icon.svg" alt="иконка кнопки" class="profile__add-button-icon"></button>
-      </section>    
+        <button class="profile__add-button" type="button"><img src="./images/add-button_icon.svg" alt="иконка кнопки"
+            class="profile__add-button-icon"></button>
+      </section>
 
       <section class="elements">
-        
+
       </section>
       <div class="popup">
         <form action="#" name="form" class="form">
-          <button type="button" class="form__close-button"><img src="./images/close-icon.svg  " alt="закрыть" class="form__close-icon"></button>
+          <button type="button" class="form__close-button"><img src="./images/close-icon.svg  " alt="закрыть"
+              class="form__close-icon"></button>
           <h2 class="form__title">Редактировать профиль</h2>
           <input type="text" name="name" class="form__input form__input_name">
           <input type="text" name="job" class="form__input form__input_job">
           <button type="submit" class="form__submit-button">Сохранить</button>
         </form>
-        <div class="popup__container">    
+        <div class="popup__container">
+        </div>
+      </div>
+      <div class="popup popup-pic">
+        <div class="popup-pic__container">
+          <button class="popup-pic__close-button"></button>
+          <img src="#" alt="картинка" class="popup-pic__photo">
+          <p class="popup-pic__text"></p>
+        </div>
+        <div class="popup__container">
+        </div>
+      </div>
+      <div class="popup popup-edit">
+        <form action="#" name="form" class="form">
+          <button type="button" class="form__close-button"><img src="./images/close-icon.svg  " alt="закрыть"
+              class="form__close-icon"></button>
+          <h2 class="form__title">Новое место</h2>
+          <input type="text" name="place" class="form__input form__input_place" placeholder="Название">
+          <input type="text" name="link" class="form__input form__input_link" placeholder="Ссылка на картинку">
+          <button type="submit" class="form__submit-button">Создать</button>
+        </form>
+        <div class="popup__container">
         </div>
       </div>
     </main>
@@ -45,44 +70,21 @@
     <footer class="footer">
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
-    
+
   </div>
   <template id="element">
     <div class="element">
       <button class="element__delete-button" type="button"></button>
-      <img src="#" alt="картинка" class="element__pic">
+      <img src="#" alt="" class="element__pic">
       <div class="element__description">
         <h2 class="element__text"></h2>
         <button type="button" class="element__like-button"></button>
       </div>
     </div>
   </template>
-  <template id="popup-pic">
-    <div class="popup popup-pic">
-      <div class="popup-pic__container">
-        <button class="popup-pic__close-button"></button>
-        <img src="#" alt="картинка" class="popup-pic__photo">
-        <p class="popup-pic__text"></p>
-      </div>
-      <div class="popup__container">    
-      </div>
-    </div>
-  </template>
-  <template id="popup">
-    <div class="popup popup-edit">
-      <form action="#" name="form" class="form">
-        <button type="button" class="form__close-button"><img src="./images/close-icon.svg  " alt="закрыть" class="form__close-icon"></button>
-        <h2 class="form__title">Новое место</h2>
-        <input type="text" name="place" class="form__input form__input_place" placeholder="Название">
-        <input type="text" name="link" class="form__input form__input_link" placeholder="Ссылка на картинку">
-        <button type="submit" class="form__submit-button">Создать</button>
-      </form>
-      <div class="popup__container">    
-      </div>
-    </div>
-  </template>
+
   <script src="./script.js"></script>
-  
+
 </body>
 
 </html>
