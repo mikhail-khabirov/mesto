@@ -43,51 +43,39 @@ const popupPic = document.querySelector('.popup-pic');
 const popupPicPhoto = document.querySelector('.popup-pic__photo');
 const popupPicText = document.querySelector('.popup-pic__text');
 const popupPicCloseButton = document.querySelector('.popup-pic__close-button');
+const cardTemplate = document.querySelector('#element').content;
 
-//загрузить 6 карточек
-function createNewElements(item) {
-  const template = document.querySelector('#element').content.cloneNode(true);
-  template.querySelector('.element__pic').src = item.link;
-  template.querySelector('.element__text').textContent = item.name;
-  template.querySelector('.element__pic').alt = item.name;
-  template.querySelector('.element__like-button').addEventListener('click', function (evt) {
+
+//создать карточку
+function createNewElement(item) {
+  const card = cardTemplate.cloneNode(true);
+  const cardPic = card.querySelector('.element__pic');
+  const cardText = card.querySelector('.element__text');
+  const cardLikeBtn = card.querySelector('.element__like-button');
+  const cadrDeleteBtn = card.querySelector('.element__delete-button');
+
+  cardPic.src = item.link;
+  cardText.textContent = item.name;
+  cardPic.alt = item.name;
+
+  cardLikeBtn.addEventListener('click', function (evt) {
     evt.target.classList.toggle('element__like-button_pressed');
   });
-  template.querySelector('.element__delete-button').addEventListener('click', function(evt){
+  
+  cadrDeleteBtn.addEventListener('click', function(evt){
     evt.target.closest('.element').remove();
   });
-  template.querySelector('.element__pic').addEventListener('click', function (evt) {
+  
+  cardPic.addEventListener('click', function (evt) {
     popupPicPhoto.src = evt.target.src;
     popupPicText.textContent = evt.target.alt;
-    popupPic.classList.add('popup_opened');
+    openPopup(popupPic);
     popupPicCloseButton.addEventListener('click', function() {
       popupPic.classList.remove('popup_opened');
     });
   });
-  elements.append(template); 
-}
-
-//загрузить 1 карточку
-function createNewElement() {
-  const template = document.querySelector('#element').content.cloneNode(true);
-  template.querySelector('.element__pic').src = inputLink.value;
-  template.querySelector('.element__text').textContent = inputPlace.value;
-  template.querySelector('.element__pic').alt = inputPlace.value;
-  template.querySelector('.element__like-button').addEventListener('click', function (evt) {
-    evt.target.classList.toggle('element__like-button_pressed');
-  });
-  template.querySelector('.element__delete-button').addEventListener('click', function(evt){
-    evt.target.closest('.element').remove();
-  });
-  template.querySelector('.element__pic').addEventListener('click', function (evt) {
-    popupPicPhoto.src = evt.target.src;
-    popupPicText.textContent = evt.target.alt;
-    popupPic.classList.add('popup_opened');
-    popupPicCloseButton.addEventListener('click', function() {
-      popupPic.classList.remove('popup_opened');
-    });
-  });
-  elements.prepend(template); 
+  
+  return card; 
 }
 
 //открыть попап
@@ -100,7 +88,7 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
 
-//попап для редактирования имени и профессии
+//открыть попап с инпутами для редактирования имени и профессии
 editButton.addEventListener('click', function(){
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
@@ -110,7 +98,7 @@ editButton.addEventListener('click', function(){
   });
 });
 
-//отправка попапа с именем и профессией
+//редактировать имя и профессию
 editForm.addEventListener('submit', function (evt){
   evt.preventDefault();
   profileName.textContent = nameInput.value;
@@ -118,7 +106,7 @@ editForm.addEventListener('submit', function (evt){
   closePopup(editPopup);
 });
 
-//попап с названием и ссылкой фото
+//открыть попап с инпутами для ввода имени и ссылки фото
 addButton.addEventListener('click', function() {
   openPopup(addPopup);
   closeAddButton.addEventListener('click', function () {
@@ -126,13 +114,17 @@ addButton.addEventListener('click', function() {
   });
 });
 
-//отправка попапа с названием и ссылкой фото
-addForm.addEventListener('submit', function(evt) {
-  evt.preventDefault();
-  createNewElement();
-  closePopup(addPopup);
+//добавить 6 карточек из массива
+initialCards.forEach(item => {
+  elements.append(createNewElement(item));
 });
 
-//обход массива
-initialCards.forEach(createNewElements);
-
+//добавить карточку с помощью попапа
+addForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  const elementArray = [{name:`${inputPlace.value}`, link:`${inputLink.value}`}];
+  elementArray.forEach(item => {
+      elements.prepend(createNewElement(item));
+    });
+  closePopup(addPopup);
+});
